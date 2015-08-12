@@ -1,4 +1,4 @@
-Indri-PruningToolkit
+indri-pruning-toolkit
 ====================
 
-This toolkit implements various static index pruning algorithms with Indri API.
+This toolkit implements various static index pruning algorithms with the Indri API.
