@@ -23,8 +23,7 @@ src/Makefile
 stamp-h1
 
 # Others
-*.swp
 .*.swp
 
 # Binaries
-src/sip
+src/IndriPruneIndex
