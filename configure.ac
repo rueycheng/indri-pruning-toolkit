@@ -60,11 +60,12 @@ fi
 
 AX_BOOST_BASE([1.46],[],
 	      [AC_MSG_ERROR([cannot find the boost libraries])])
+AX_BOOST_FILESYSTEM
+AX_BOOST_UNIT_TEST_FRAMEWORK
 
 AC_SUBST([CXXFLAGS])
 
 # Checks for library functions.
 
-AC_CONFIG_FILES([Makefile
-                 src/Makefile])
+AC_CONFIG_FILES([Makefile src/Makefile test/Makefile])
 AC_OUTPUT
