@@ -9,6 +9,8 @@ AC_CONFIG_HEADERS([config.h])
 
 # Checks for programs.
 AC_PROG_CXX
+AC_PROG_RANLIB
+AM_PROG_AR
 
 # Checks for indri settings.
 AC_ARG_WITH([indri],
