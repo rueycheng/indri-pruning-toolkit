@@ -14,8 +14,8 @@ Currently, the following methods are supported:
 
 If you use this package in your research work, please cite the following paper:
 
-> R.-C. Chen, C.-J. Lee, and W. B. Croft. On divergence measures and static index pruning. 
-> In *Proceedings of ICTIR '15*. To appear.
+> R.-C. Chen, C.-J. Lee, and W. B. Croft. On divergence measures and static index
+> pruning. In *Proceedings of ICTIR '15*, pages 151-160. ACM, 2015.
 
 ### Installation ###
 
@@ -63,7 +63,7 @@ R.-C. Chen and C.-J. Lee. An information-theoretic account of static index
 pruning.  In *Proceedings of SIGIR ’13*, pages 163–172. ACM, 2013.
 
 R.-C. Chen, C.-J. Lee, and W. B. Croft. On divergence measures and static index
-pruning. In *Proceedings of ICTIR '15*. To appear.
+pruning. In *Proceedings of ICTIR '15*, pages 151-160. ACM, 2015.
 
 D. Carmel, D. Cohen, R. Fagin, E. Farchi, M. Herscovici, Y. S. Maarek, and A.
 Soffer. Static index pruning for information retrieval systems. In *Proceedings
