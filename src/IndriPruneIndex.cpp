@@ -95,7 +95,7 @@ class LazyVectorLoader {
 public:
     LazyVectorLoader(std::string guardPath): _in(guardPath) { }
 
-    bool hasNext() const { return _in; }
+    bool hasNext() const { return static_cast<bool>(_in); }
 
     void next(std::unordered_set<int>& v) {
 	v.clear();
