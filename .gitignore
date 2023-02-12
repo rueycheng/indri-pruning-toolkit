@@ -13,14 +13,16 @@
 *.a
 
 # Autotool
+.deps/
 Makefile
-autom4te.cache
+autom4te.cache/
 config.h
 config.log
 config.status
-src/.deps/
-src/Makefile
 stamp-h1
+
+*.log
+*.trs
 
 # Others
 .*.swp
