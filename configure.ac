@@ -2,6 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.65])
+
 AC_INIT([indri-pruning-toolkit], [1.0], [rueycheng@gmail.com])
 AM_INIT_AUTOMAKE([foreign -Wall -Werror])
 AC_CONFIG_SRCDIR([src/IndriPruneIndex.cpp])
