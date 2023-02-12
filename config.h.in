@@ -3,6 +3,12 @@
 /* define if the Boost library is available */
 #undef HAVE_BOOST
 
+/* define if the Boost::Filesystem library is available */
+#undef HAVE_BOOST_FILESYSTEM
+
+/* define if the Boost::Unit_Test_Framework library is available */
+#undef HAVE_BOOST_UNIT_TEST_FRAMEWORK
+
 /* Define to 1 if you have the <indri/indri-platform.h> header file. */
 #undef HAVE_INDRI_INDRI_PLATFORM_H
 
