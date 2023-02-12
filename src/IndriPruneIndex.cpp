@@ -1486,11 +1486,11 @@ void prune_index(indri::api::Parameters& parameters) {
 	{ "gup_x2", generalized_uniform_pruning<MinusReciprocalGain> },
 	{ "gup_renyi", generalized_uniform_pruning<MinusExponentialGain> },
 
-	{ "guarded_x2", generalized_uniform_pruning<MinusReciprocalGain> },
+	// { "guarded_x2", generalized_uniform_pruning<MinusReciprocalGain> },
 
-	{ "mix_kl_x2", generalized_uniform_pruning<MixtureGain<LogarithmGain, MinusReciprocalGain>> },
-	{ "mix_hellinger_x2", generalized_uniform_pruning<MixtureGain<SquareRootGain, MinusReciprocalGain>> },
-	{ "mix_renyi_x2", generalized_uniform_pruning<MixtureGain<MinusExponentialGain, MinusReciprocalGain>> },
+	// { "mix_kl_x2", generalized_uniform_pruning<MixtureGain<LogarithmGain, MinusReciprocalGain>> },
+	// { "mix_hellinger_x2", generalized_uniform_pruning<MixtureGain<SquareRootGain, MinusReciprocalGain>> },
+	// { "mix_renyi_x2", generalized_uniform_pruning<MixtureGain<MinusExponentialGain, MinusReciprocalGain>> },
 
 	{ "dcp", document_centric_pruning },
 	{ "pp", popularity_based_pruning },
