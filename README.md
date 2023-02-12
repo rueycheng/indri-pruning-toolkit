@@ -17,7 +17,33 @@ If you use this package in your research work, please cite the following paper:
 > R.-C. Chen, C.-J. Lee, and W. B. Croft. On divergence measures and static index pruning. 
 > In *Proceedings of ICTIR '15*. To appear.
 
+### Installation ###
 
+This package depends on:
+
+1. An update-to-date version of g++ that supports C++0x, e.g., can do `-std=c++0x`;
+2. Boost library >= 1.46;
+3. A patched [Indri] library 5.x.
+
+Better check if these requirements are satisfied prior to installation.  For (3), you need to manually apply the patch at `share/DocListMemoryBuilder.patch` to the Indri source.  
+
+Suppose that the Indri source code (`indri-5.9` for example) and this repo (`indri-pruning-toolkit`) are both placed under `$HOME`.  Do the following:
+
+    cd $HOME/indri-5.9
+    patch -p1 < $HOME/indri-pruning-toolkit/share/DocListMemoryBuilder.patch
+
+Then compile the Indri code and get it installed.  Most likely you'll want to put it under `$HOME`:
+
+    ./configure --prefix=$HOME
+    make -j8 && make install
+
+If the first line doesn't work out and `configure` is really there, try `chmod a+x configure`.  Once this comes through, go back to the toolkit repo and do:
+
+    ./configure --prefix=$HOME --with-indri=$HOME
+    make && make install
+
+
+[Indri]: http://www.lemurproject.org/indri.php
 
 ### References ###
 
