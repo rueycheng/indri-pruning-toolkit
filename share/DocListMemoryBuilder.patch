@@ -1,0 +1,40 @@
+diff -Naur indri-5.5/include/indri/DocListIterator.hpp indri-5.5_fixed/include/indri/DocListIterator.hpp
+--- indri-5.5/include/indri/DocListIterator.hpp	2008-11-06 01:50:27.000000000 +0800
++++ indri-5.5_fixed/include/indri/DocListIterator.hpp	2013-11-23 15:19:37.824927347 +0800
+@@ -90,6 +90,9 @@
+ 
+       // returns true if the iterator has no more entries
+       virtual bool finished() = 0;
++
++      // patched by rueycheng (23 Nov 2013)
++      virtual bool isFrequent() const = 0;
+     };
+   }
+ }
+diff -Naur indri-5.5/include/indri/DocListMemoryBuilder.hpp indri-5.5_fixed/include/indri/DocListMemoryBuilder.hpp
+--- indri-5.5/include/indri/DocListMemoryBuilder.hpp	2008-11-06 01:50:27.000000000 +0800
++++ indri-5.5_fixed/include/indri/DocListMemoryBuilder.hpp	2013-11-23 15:19:37.824927347 +0800
+@@ -66,6 +66,9 @@
+       TermData* termData();
+       DocListIterator::DocumentData* currentEntry();
+       indri::utility::greedy_vector<DocListIterator::TopDocument>& topDocuments();
++
++      // patched by rueycheng (23 Nov 2013)
++      bool isFrequent() const { return true; }
+     };
+ 
+     class DocListMemoryBuilder {
+diff -Naur indri-5.5/src/IndexWriter.cpp indri-5.5_fixed/src/IndexWriter.cpp
+--- indri-5.5/src/IndexWriter.cpp	2009-02-26 01:46:33.000000000 +0800
++++ indri-5.5_fixed/src/IndexWriter.cpp	2013-11-23 15:19:37.824927347 +0800
+@@ -758,9 +758,7 @@
+ 
+   for( size_t i=0; i<lists.size(); i++ ) {
+     WriterIndexContext* list = lists[i];
+-    indri::index::DiskDocListIterator* iterator = dynamic_cast<DiskDocListIterator*>(lists[i]->iterator->currentEntry()->iterator);
+-    bool isMemoryIndex = (iterator == 0);
+-    bool wasFrequent = (isMemoryIndex || iterator->isFrequent());
++    bool wasFrequent = list->iterator->currentEntry()->iterator->isFrequent();
+ 
+     if( !wasFrequent )
+       list->wasInfrequentCount++;
