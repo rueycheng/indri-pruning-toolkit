@@ -30,10 +30,10 @@ Better check if these requirements are satisfied prior to installation.  For
 to the Indri source.  
 
 Suppose that the Indri source code (`indri-5.9` for example) and this repo
-(`indri-pruning-toolkit`) are both placed under `$HOME`.  Do the following:
+(`indri-pruning-toolkit`) are both placed under `$HOME/src`.  Do the following:
 
-    cd $HOME/indri-5.9
-    patch -p1 < $HOME/indri-pruning-toolkit/share/DocListMemoryBuilder.patch
+    cd $HOME/src/indri-5.9
+    patch -p1 < $HOME/src/indri-pruning-toolkit/share/DocListMemoryBuilder.patch
 
 Then compile the Indri code and get it installed.  Most likely you'll want to
 put it under `$HOME`:
